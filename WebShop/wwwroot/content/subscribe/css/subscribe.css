@@ -1,0 +1,50 @@
+/*------------------------Subscribe ---------------------------------------------------------------*/
+.subscribe_cont {
+    display: flex;   
+    justify-content: center;
+    align-items: center;
+    text-align:center;  
+    margin-top: 88px !important;
+}
+.subscribe_inform {
+    max-width: 750px;
+}
+.subscribe_title {
+    font-size: 30px;
+    font-weight: 500;
+}
+.subscribe_text {
+    font-size: 14px;
+    line-height: 2.14;
+    font-weight: 400;
+    color: #6c6a74;
+    margin-top: 8px;
+}
+.subscribe_input {
+    width: inherit;
+    height: 40px;
+    border: none;
+    border-bottom: solid 2px #787878;
+    outline:none;
+    text-align: center;
+}
+.subscribe_form {
+    margin-top: 45px;
+    width: 100%;
+}
+.subscribe_button {
+    
+    border-color:#000 !important;
+    margin: 55px auto 0 auto;     
+}
+.subscribe_button:hover {
+    
+    background-color:#000;
+    color: #fff;  
+}
+@media screen and (max-width:479px) {
+    .subscribe_inform {
+        
+        min-width: 400px !important;
+    }
+}

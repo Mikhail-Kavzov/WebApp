@@ -1,0 +1,86 @@
+[
+  {
+    "outputFileName": "wwwroot/css/index.min.css",
+    "inputFiles": [
+      "wwwroot/content/subscribe/css/subscribe.css",
+      "wwwroot/content/productImgCont/css/productImgCont.css",
+      "wwwroot/content/mainTitle/css/mainTitle.css",
+      "wwwroot/content/initSettings/css/initSettings.css",
+      "wwwroot/content/indexMain/css/indexMain.css",
+      "wwwroot/content/header/css/header.css",
+      "wwwroot/content/footer/css/footer.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/pop_up_menu.min.js",
+    "inputFiles": [
+      "wwwroot/content/header/js/pop_up_menu.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    }
+  },
+  {
+    "outputFileName": "wwwroot/css/product.min.css",
+    "inputFiles": [
+      "wwwroot/content/subscribe/css/subscribe.css",
+      "wwwroot/content/productImgCont/css/productImgCont.css",
+      "wwwroot/content/product/css/product.css",
+      "wwwroot/content/photoDB/css/photoDB.css",
+      "wwwroot/content/mainTitle/css/mainTitle.css",
+      "wwwroot/content/initSettings/css/initSettings.css",
+      "wwwroot/content/header/css/header.css",
+      "wwwroot/content/footer/css/footer.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/product.min.js",
+    "inputFiles": [
+      "wwwroot/content/product/js/product.js",
+      "wwwroot/content/header/js/pop_up_menu.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/addProductForm.min.css",
+    "inputFiles": [
+      "wwwroot/content/addProductForm/css/addProductForm.css",
+      "wwwroot/content/footer/css/footer.css",
+      "wwwroot/content/header/css/header.css",
+      "wwwroot/content/initSettings/css/initSettings.css",
+      "wwwroot/content/photoDB/css/photoDB.css",
+      "wwwroot/content/selectList/css/selectList.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/addProductForm.min.js",
+    "inputFiles": [
+      "wwwroot/content/product/js/product.js",
+      "wwwroot/content/header/js/pop_up_menu.js",
+      "wwwroot/content/addProductForm/js/addPhoto.js",
+      "wwwroot/content/selectList/js/selectList.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/css/Category.min.css",
+    "inputFiles": [
+      "wwwroot/content/subscribe/css/subscribe.css",
+      "wwwroot/content/productImgCont/css/productImgCont.css",
+      "wwwroot/content/mainTitle/css/mainTitle.css",
+      "wwwroot/content/initSettings/css/initSettings.css",
+      "wwwroot/content/header/css/header.css",
+      "wwwroot/content/footer/css/footer.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/js/category.min.js",
+    "inputFiles": [
+      "wwwroot/content/header/js/pop_up_menu.js",
+      "wwwroot/js/jquerys/scrolling.js"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": false
+    }
+  }
+]

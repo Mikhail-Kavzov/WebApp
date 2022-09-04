@@ -1,0 +1,22 @@
+﻿@using WebShop.Models;
+@model IEnumerable<Product>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+        if (Model != null)
+    {
+        <div class="purchase_description">
+            <div class="purchase_description_cont _cont">
+                @foreach (var item in Model)
+                {
+                    <div class="purchase_element">
+                        <div class="purchase_element_img">
+                            <a asp-controller="Product" asp-action="ProductInfo" asp-route-id="@item.ProductId" class="purchase_img_link photo_cover"><img src="~/images/@item.FileProducts[0].Name" alt="product"></a>
+                        </div>
+                        <p class="purchase_title"><a asp-controller="Product" asp-action="ProductInfo" asp-route-id="@item.ProductId" class="purchase_link">@item.Name</a></p>
+                        <p class="purchase_price">$@item.Price</p>
+                    </div>
+                }
+            </div>
+    </div>
+    }
+}

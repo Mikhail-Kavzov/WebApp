@@ -1,0 +1,29 @@
+.product_photos, .product_buy_information {
+    flex: 0 1 48%;
+}
+.product_small {
+    display:flex;
+    justify-content: space-between;
+    margin-top:20px;
+    transition: all ease 400ms;
+}
+.product_small div {
+    flex: 0 1 23%;
+}
+.product_small div:hover{
+    border: 1px solid #000;
+    box-shadow: 2px 9px 49px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+@media screen and (max-width:1000px) {
+    
+    .product_photos, .product_buy_information {
+        flex: 0 1 100%;
+    }
+    .product_buy_information, .product_buy_cont {
+        margin-top: 50px;
+    }
+    
+}

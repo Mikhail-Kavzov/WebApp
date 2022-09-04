@@ -1,0 +1,12 @@
+﻿@model IEnumerable<Product>
+@{
+    ViewBag.CssPath = "css/category.min.css";
+    ViewBag.JsPath = "js/category.min.js";
+}
+@await Html.PartialAsync("/Views/Home/MainTitle.cshtml")
+
+<div id="scrollWrapper">
+    @await Html.PartialAsync("/Views/Product/Purchase.cshtml")
+</div>
+
+

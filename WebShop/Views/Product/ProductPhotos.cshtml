@@ -1,0 +1,15 @@
+﻿@model IEnumerable<string>           
+
+ <div class="product_photos">
+     <div class="product_photo_main photo_cover">
+        <img src="~/images/@Model.First()" alt="details" id="main_photo" class="photo">
+     </div>
+     <div class="product_small">
+         @foreach (var item in @Model)
+         {
+          <div class="product_photo_sm">
+              <img src="~/images/@item" alt="details" class="product_photo photo">
+          </div>
+         }
+     </div>
+ </div>

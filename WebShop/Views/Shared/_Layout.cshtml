@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/plugins/font-awesome-4.7.0/css/font-awesome.min.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/@ViewBag.CssPath" asp-append-version="true">
+    <title>Site</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header_cont _cont">
+                <a class="logo" href="#">E-Shop</a>
+                <nav class="header_menu menu">
+                    <ul class="menu_list">
+                        <li class="menu_item"><a asp-controller="Category" asp-action="Index" asp-route-id="1" class="menu_link">Notebooks</a></li>
+                        <li class="menu_item"><a asp-controller="Category" asp-action="Index" asp-route-id="2" class="menu_link">Smartphones</a></li>
+                        <li class="menu_item"><a asp-controller="Category" asp-action="Index" asp-route-id="3" class="menu_link">Tablets</a></li>
+                        <li class="menu_item"><a asp-controller="Category" asp-action="Index" asp-route-id="0" class="menu_link">Cameras</a></li>
+                        <li class="menu_item"><a href="#" class="menu_link">Contacts</a></li>
+                    </ul>
+                </nav>
+                <div class="pop-up_menu_sign">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </div>
+            </div>
+            <section class="pop-up_menu">
+                <div class="pop-up_menu_cont">
+                    <div class="menu_close">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </div>
+                    <ul class="pop-up_menu_list">
+                        <li class="pop-up_menu_item"><a asp-controller="Category" asp-action="Index" asp-route-id="1" class="pop-up_menu_link">Notebooks</a></li>
+                        <li class="pop-up_menu_item"><a asp-controller="Category" asp-action="Index" asp-route-id="2" class="pop-up_menu_link">Smartphones</a></li>
+                        <li class="pop-up_menu_item"><a asp-controller="Category" asp-action="Index" asp-route-id="3" class="pop-up_menu_link">Tablets</a></li>
+                        <li class="pop-up_menu_item"><a asp-controller="Category" asp-action="Index" asp-route-id="0" class="pop-up_menu_link">Cameras</a></li>
+                        <li class="pop-up_menu_item"><a class="pop-up_menu_link" href="#">Contacts</a></li>
+                    </ul>
+                </div>
+            </section>
+        </header>
+        <main class="main">
+            @RenderBody()
+        </main>
+        <footer class="footer">
+            <div class="footer_cont _cont">
+                <a class="footer_logo logo" href="#">E-Shop</a>
+                <p class="footer_text">Copyright ©2022 All rights reserved</p>
+                <ul class="icons_list">
+                    <li class="icon">
+                        <a href="#">
+                            <i class="fa fa-pinterest" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="icon">
+                        <a href="#">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="icon">
+                        <a href="#">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="icon">
+                        <a href="#">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-form-styler@2.0.2/dist/jquery.formstyler.min.js"></script>
+    <script src="~/@ViewBag.JsPath" asp-append-version="true"></script>
+</body>
+</html>

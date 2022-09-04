@@ -1,0 +1,84 @@
+﻿@model IEnumerable<Product>
+@await Html.PartialAsync("MainTitle")
+
+<div class="see_more">
+    <div class="see_more_cont _cont" id="see_id">
+        <div class="see_small">
+            <div class="ads_small_inner">
+                <div class="inform_small">
+                    <h2 class="ads_title">Smart Phones</h2>
+                    <a href="#" class="ads_link">See more</a>
+                </div>
+                <div class="ads_discount">
+                    <div class="discount_wrapper">
+                        <img src="~/images/discount.png" alt="discount">
+                        <div class="ads_discount_text">
+                            <p>20<span>%</span></p>
+                            <span>Discount</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="see_large">
+            <div class="ads_large_inner">
+                <div class="inform_large">
+                    <h2 class="ads_title">Professional Cameras</h2>
+                    <p class="ads_large_inform">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Nullam a ultricies metus. Sed nec molestie eros. Sed viver ra velit venenatis fermentum luctus.
+                    </p>
+                    <a href="#" class="ads_link">See more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@await Html.PartialAsync("/Views/Product/Purchase.cshtml", @Model)
+
+<div class="amazing_devices">
+    <div class="amazing_devices_cont _cont">
+        <div class="amazing_dev_content">
+            <h2 class="ads_title">Amazing Devices</h2>
+            <p class="ads_large_inform">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus.</p>
+            <a href="#" class="ads_link">See more</a>
+        </div>
+    </div>
+</div>
+<div class="advantages">
+    <div class="advantage_cont _cont">
+        <div class="advantage_inform">
+            <div class="img_advantage">
+                <img src="~/images/icon_1.svg" alt="icon1">
+            </div>
+            <p class="advantage_title">Free Shipping Worldwide</p>
+            <p class="advantage_text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nullam a ultricies metus. Sed nec molestie.
+            </p>
+        </div>
+        <div class="advantage_inform">
+            <div class="img_advantage">
+                <img src="~/images/icon_2.svg" alt="icon2">
+            </div>
+            <p class="advantage_title">Free Returns</p>
+            <p class="advantage_text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nullam a ultricies metus. Sed nec molestie.
+            </p>
+        </div>
+        <div class="advantage_inform">
+            <div class="img_advantage">
+                <img src="~/images/icon_3.svg" alt="icon3">
+            </div>
+            <p class="advantage_title">24h Fast Support</p>
+            <p class="advantage_text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Nullam a ultricies metus. Sed nec molestie
+            </p>
+        </div>
+    </div>
+</div>
+@await Html.PartialAsync("/Views/Subscribe/Index.cshtml")
+

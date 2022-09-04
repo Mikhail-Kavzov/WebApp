@@ -1,0 +1,55 @@
+﻿@model Product;
+
+@{
+    ViewBag.CssPath = "css/addProductForm.min.css";
+    ViewBag.JsPath = "js/addProductForm.min.js";
+    const string noPhoto = "noPhoto.jpg";
+}
+
+<div class="add_Product_cont _cont">
+    <form method="POST" enctype="multipart/form-data" id="add_Product_Form">
+        <div class="product_wrapper">
+            <div class="image_wrapper">
+                <div class="input__wrapper">
+                    <input name="loadFiles" type="file" id="input__file" class="input input__file" accept=".png, .jpg, .jpeg" multiple>
+                    <label for="input__file" class="input__file-button">
+                        <p class="input__file-icon-wrapper"><i class="fa fa-folder-o" aria-hidden="true"></i></p>
+                        <span class="input__file-button-text">Выберите файл</span>
+                    </label>
+                </div>
+                @{
+                    @await Html.PartialAsync("ProductPhotos", new List<string>(){
+                        noPhoto,
+                        noPhoto,
+                        noPhoto,
+                        noPhoto
+                    }
+                    );
+                }
+               
+            </div>
+            <div class="text_wrapper">
+                <label asp-for="Name" class="text_label">Product Name:</label>
+                <input type="text" id="product_name" asp-for="Name" class="input_form" maxlength="30" minlength="1" required autocomplete="off">
+
+                <label asp-for="Price" class="text_label">Price:</label>
+                <input type="number" id="product_price" asp-for="Price" class="input_form"  required autocomplete="off">
+
+                <label asp-for="Count" class="text_label">Count:</label>
+                <input type="number" id="product_count" asp-for="Count" class="input_form"  required autocomplete="off">
+
+                <label asp-for="Description" class="text_label">Description:</label>
+                <textarea id="product_description" asp-for="Description" class="input_form" minlength="1" maxlength="300" required autocomplete="off"></textarea>
+
+                <label asp-for="Availability">Availability:</label>
+                <select  class="select" asp-for="Availability" asp-items="Html.GetEnumSelectList<AvailabilityType>()"></select>
+
+                <label asp-for="Category">Category:</label>
+                <select  class="select" asp-for="Category" asp-items="Html.GetEnumSelectList<CategoryType>()"></select>
+                
+
+                <input type="submit" value="Send" id="btn-send" name="submit" class="button_send" disabled>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,112 @@
+/* Settings */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;   
+}
+
+a {
+ text-decoration: none;
+ color:inherit;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    display: block;
+    vertical-align: top;
+    max-width:100% !important;
+    height: 100%;
+    width: 100%;
+    oveflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight:inherit;
+    font-size: inherit;
+    font-family: 'Poppins',sans-serif;
+    display: block !important;
+}
+
+
+p {
+    font-size: 14px;
+    line-height: 2.14;
+    font-weight:500;
+    word-break: break-all;
+}
+html,
+body {
+    height: 100%;
+    line-height: 1;
+    font-size: 18px;
+    color: #1b1b1b;
+    font-family: 'Poppins', sans-serif;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none !important; 
+}
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+    appearance: none !important;
+    -moz-appearance: textfield !important;
+}
+textarea{
+  resize:none !important;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display:flex;
+    flex-direction: column;
+   
+}
+
+._cont{
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 120px;
+    min-width: 470px !important;
+}
+
+
+.main {
+    flex: 1 1 auto;
+}
+
+.ads_title {
+    display: block !important;
+}
+
+.photo_cover {
+    width: 100%;
+  padding-top: 100%;
+  position: relative;
+}
+
+.photo_cover img {
+    position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

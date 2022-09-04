@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Product>
+@{
+    ViewBag.CssPath = "css/product.min.css";
+    ViewBag.JsPath = "js/product.min.js";
+    var productEl = Model.Last();
+    var productPhotos = new List<string?>()
+    {
+        productEl.FileProducts[0].Name,
+        productEl.FileProducts[1].Name,
+        productEl.FileProducts[2].Name,
+        productEl.FileProducts[3].Name
+    };
+}
+@await Html.PartialAsync("/Views/Home/MainTitle.cshtml")
+<section class="product_buy">
+    <div class="product_buy_cont _cont">
+        @await Html.PartialAsync("ProductPhotos",productPhotos)
+        <div class="product_buy_information">
+            <div class="product_buy_main_info">
+                <h2 class="product_name">@productEl.Name</h2>
+                <p class="purchase_price">$@productEl.Price</p>
+                <p class="product_availability">Availability:<span class="product_availability_stock product_av">@productEl.Availability</span></p>
+            </div>
+            <p class="product_text">
+                @productEl.Description
+            </p>
+            <div class="product_buttons">
+                <button class="product_count">
+                    <span class="product_qty">Qty</span>
+                    <span class="count_number">1</span>
+                    <div class="count_up_down">
+                        <div class="count_up">
+                            <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                        </div>
+                        <div class="count_down">
+                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </button>
+                <a class="add_to_cart_button button">Add to cart</a>
+            </div>
+            <div class="share_links">
+                <span class="Share_description">Share: </span>
+                <ul class="icons_list">
+                    <li class="icon">
+                        <a href="#">
+                            <i class="fa fa-pinterest" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="icon">
+                        <a href="#">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="icon">
+                        <a href="#">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="icon">
+                        <a href="#">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+@await Html.PartialAsync("Purchase", Model.SkipLast(1))

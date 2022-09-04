@@ -1,0 +1,191 @@
+
+/*----------See more ---------------------------------------------------------------------------------*/
+.see_more_cont {
+    display: flex;
+    color: #fff;
+    justify-content: space-between;
+    margin-top: 30px;
+    height: 490px;
+}
+#see_id {
+    padding:0;
+}
+.discount_wrapper {
+    position: relative;
+}
+.see_small {
+    background: url(../images/avds_small.jpg) no-repeat;
+    background-size:cover;
+    background-position: center center;
+    padding: 30px;
+    flex: 0 0 33%;
+  
+}
+
+@media screen and (max-width:1200px)
+{   .see_more_cont {
+    flex-direction: column;
+    }
+    .see_large {
+        margin-top: 30px;
+        
+    }
+    .see_small, .see_large {
+        flex: 0 0 auto;     
+    }
+    .see_more_cont{
+        height:100%;
+    }
+}
+.ads_small_inner{
+    position:relative;
+    border: 2px solid white;   
+    height:100%;
+}
+.inform_small {
+    max-width: 250px;
+    padding: 57px 30px 0 31px;
+}
+.see_large {
+    background: url(../images/avds_large.jpg) no-repeat;
+    background-size:cover;
+    background-position: center center;
+    padding: 39px 0 44px 32px;
+    flex: 0 0 66%;
+}
+.see_large, .see_small {
+    height: 490px;
+}
+.ads_large_inner {
+    max-width:567px;
+    background: rgba(0,0,0,0.63);
+    padding: 51px 130px 30px 30px;
+}
+
+.ads_large_inform {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 2.14;
+    margin: 11px 0 40px 0;
+    padding-left: 2px;
+}
+
+.ads_title{
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.16;
+}
+
+.ads_link {
+    display:block;
+    margin-top:18px;
+    padding-left:4px;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: underline;
+}
+.ads_discount_text {
+    color: #1b1b1b;
+    position: absolute;
+    bottom: 71px;
+    right: 0;
+    width: 152px;
+    text-align: center;
+    font-weight: 700;  
+}
+
+.ads_discount_text p {
+    font-size: 60px;  
+    line-height: 0.75;
+}
+.ads_discount_text span {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 1px;
+}
+.ads_discount_text p:last-child span {
+    font-size: 36px;
+    vertical-align: super; 
+    font-weight: 700;  
+}
+
+.ads_discount {
+    position: absolute;
+    right: 36px;
+    bottom: 0;
+}
+/*----------Advantage ---------------------------------------------------------------------------------*/
+.advantage_inform {
+    flex: 0 0 33.3333%;
+    text-align:center;
+}
+.img_advantage {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto;
+}
+.img_advantage img {
+    max-width: 100%;
+}
+.advantage_cont {
+ display:flex;
+ justify-content: space-between;
+ margin-top: 150px;
+}
+.advantage_title {
+    font-weight: 500;
+    margin-top: 33px;
+}
+.advantage_text {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 2.14;
+    font-weight: 400;
+    color: #6c6a74;
+
+}
+@media screen and (max-width:992px)
+{   .advantage_cont {
+    flex-direction: column;
+}
+    .advantage_inform {
+        flex: 0 0 auto;     
+    }
+    .advantage_inform:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+
+/*----------Amazing devices ---------------------------------------------------------------------------------*/
+.amazing_devices_cont {
+    background: url(../images/avds_xl.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: 80px;
+    color: white;
+    width: 100%;
+    height: 345px;
+    padding: 35px;
+    min-width: 461px;
+}
+.amazing_dev_content {
+    width: 391px;
+    height: 100%;
+    background: #e95a5a;
+    padding: 20px 30px 40px 42px;
+}
+
+
+@media screen and (max-width:576px)
+{   .amazing_dev_content {
+    margin: 0 auto;
+}
+}
+@media screen and (max-width:479px)
+{   .amazing_devices_cont {
+    min-width: 100% !important;
+    padding: 0 !important;
+}
+}
+
